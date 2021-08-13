@@ -19,6 +19,14 @@ class ComplexNumber {
 
 class MandelbrotSet {
     public:
-        vector<vector<ComplexNumber>> Grid;
-        MandelbrotSet();
+        double real_min;
+        double real_max;
+        double imag_min;
+        double imag_max;
+        int nx;
+        int ny;
+        vector<vector<ComplexNumber>> grid;
+        MandelbrotSet(double real_min, double real_max, double imag_min, double imag_max, int nx, int ny);
+        void constructGrid();
+        void showGrid();
 };
